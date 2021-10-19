@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 
 class BasketFragment : Fragment() {
@@ -25,6 +24,7 @@ class BasketFragment : Fragment() {
     }
 
     private lateinit var backButton: Button
+    private lateinit var homeButton: Button
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -33,7 +33,10 @@ class BasketFragment : Fragment() {
         backButton.setOnClickListener{
             findNavController().navigate(R.id.action_basketFragment_to_mainFragment)
         }
-
+        homeButton = requireActivity().findViewById<Button>(R.id.home_backet)
+        homeButton.setOnClickListener{
+            findNavController().navigate(R.id.action_basketFragment_to_mainFragment)
+        }
 
     }
 

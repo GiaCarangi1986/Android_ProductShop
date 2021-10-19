@@ -1,6 +1,6 @@
 package com.example.myapplication.model
 
-class ProductItemw(name_: String, count_: Int, isChecked_: Boolean, cost_: Double, labelForCost_: String) {
+class ProductItemKotlin(name_: String, count_: Int, isChecked_: Boolean, cost_: Double, labelForCost_: String) {
     var name = name_
         set(value){
             field = value

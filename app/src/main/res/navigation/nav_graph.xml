@@ -24,4 +24,9 @@
             app:destination="@id/mainFragment"
             app:popUpTo="@id/nav_graph" />
     </fragment>
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.example.myapplication.fragments.ProductListFragment"
+        android:label="fragment_list_products"
+        tools:layout="@layout/fragment_list_products" />
 </navigation>

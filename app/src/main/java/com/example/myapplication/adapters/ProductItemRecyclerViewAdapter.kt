@@ -32,7 +32,7 @@ class ProductItemRecyclerViewAdapter (private val productsInBasket: MutableList<
         var unitOfMeasurementTextView: TextView? = null
         var countOfProductsInCatalogTextView: TextView? = null
         init {
-            searchProductItemTextView = itemView?.findViewById(R.id.search_product_item_text)
+            searchProductItemTextView = itemView?.findViewById(R.id.chosen_product_item)
             nameOfProductTextView = itemView?.findViewById(R.id.name_of_product_text)
             priceOfProductTextView = itemView?.findViewById(R.id.price_of_product_chosen_product)
             unitOfMeasurementTextView = itemView?.findViewById(R.id.unit_of_measurement)
