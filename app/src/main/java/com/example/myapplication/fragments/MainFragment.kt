@@ -37,16 +37,20 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         basketButton= requireView().findViewById(R.id.basket_main_botton)
         basketButton.setOnClickListener{
-            findNavController().navigate(R.id.action_mainFragment_to_basketFragment)
+            val bundle = Bundle()
+            bundle.putString("windowType", "basket")
+            findNavController().navigate(R.id.action_mainFragment_to_basketFragment, bundle)
         }
-        categoryButton= requireView().findViewById(R.id.catalog_main_botton)
-        categoryButton.setOnClickListener{
-            findNavController().navigate(R.id.action_basketFragment_to_mainFragment)
+        catalogButton= requireView().findViewById(R.id.catalog_main_botton)
+        catalogButton.setOnClickListener{
+            val bundle = Bundle()
+            bundle.putString("windowType", "category")
+            findNavController().navigate(R.id.action_mainFragment_to_basketFragment, bundle)
         }
     }
 
 private lateinit var basketButton: Button
-private lateinit var categoryButton: Button
+private lateinit var catalogButton: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

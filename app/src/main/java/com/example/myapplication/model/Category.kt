@@ -1,13 +1,14 @@
 package com.example.myapplication.model
 
-class Catalog(name_: String, img_: String) {
-    var name = name_
+class Category(name: String, img: String = "") {
+
+    var name = name
         set(value){
             field = value
         }
         get() = field
 
-    var img = img_
+    var img = img
         set(value){
             field = value
         }

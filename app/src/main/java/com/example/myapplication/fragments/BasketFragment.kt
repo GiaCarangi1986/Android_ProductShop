@@ -6,13 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.FragmentContainerView
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.myapplication.R
+
+private const val ARG_PARAM1 = "windowType"
 
 class BasketFragment : Fragment() {
 
+    private var windowType: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        arguments?.let {
+            windowType = it.getString(ARG_PARAM1)
+        }
     }
 
     override fun onCreateView(
@@ -25,10 +36,25 @@ class BasketFragment : Fragment() {
 
     private lateinit var backButton: Button
     private lateinit var homeButton: Button
+    private lateinit var fragmentContainerView : FragmentContainerView
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        fragmentContainerView = requireActivity().findViewById(R.id.fragmentContainerView2)
+
+        var navController = Navigation.findNavController(requireActivity(), R.id.fragmentContainerView2)
+        var navControllerMain = Navigation.findNavController(requireActivity(), R.id.fragmentContainerView)
+
+        if(windowType.equals("category")){
+//            val navHostFragment = requireActivity().supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
+//            val navController = navHostFragment.navController
+//            navController.navigate(R.id.categoryFragment)
+
+            navController.navigate(R.id.categoryFragment)
+        }
+
         backButton = requireActivity().findViewById<Button>(R.id.back_basket)
         backButton.setOnClickListener{
             findNavController().navigate(R.id.action_basketFragment_to_mainFragment)
@@ -42,9 +68,11 @@ class BasketFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(windowType: String) =
             BasketFragment().apply {
-
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, windowType)
+                }
             }
     }
 }

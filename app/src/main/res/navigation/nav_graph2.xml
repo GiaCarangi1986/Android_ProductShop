@@ -10,4 +10,9 @@
         android:name="com.example.myapplication.fragments.ChosenProductsFragment"
         android:label="fragment_chosen_products"
         tools:layout="@layout/fragment_chosen_products" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.myapplication.fragments.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
 </navigation>

@@ -1,31 +1,31 @@
 package com.example.myapplication.model
 
-class ProductItemKotlin(name_: String, count_: Int, isChecked_: Boolean, cost_: Double, labelForCost_: String) {
-    var name = name_
+class ProductItemKotlin(name: String, count: Int, isChecked: Boolean, cost: Double, labelForCost: String) {
+    var name = name
         set(value){
             field = value
         }
         get() = field
 
-    var count = count_
+    var count = count
         set(value){
             field = value
         }
         get() = field
 
-    var isChecked = isChecked_
+    var isChecked = isChecked
         set(value){
             field = value
         }
         get() = field
 
-    var cost = cost_
+    var cost = cost
         set(value){
             field = value
         }
         get() = field
 
-    var labelForCost = labelForCost_
+    var labelForCost = labelForCost
         set(value){
             field = value
         }
