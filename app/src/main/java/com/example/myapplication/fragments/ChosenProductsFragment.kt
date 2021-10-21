@@ -26,19 +26,22 @@ class ChosenProductsFragment : Fragment() {
     }
 
     private lateinit var productsRecyclerView: RecyclerView
-    private lateinit var productsInBasketList : List<ProductItem>
+    private lateinit var productsInBasketList: List<ProductItem>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var product1 : ProductItem = ProductItem()
-        var product2 : ProductItem = ProductItem()
-        var product3 : ProductItem = ProductItem()
+        var product1: ProductItem = ProductItem()
+        var product2: ProductItem = ProductItem()
+        var product3: ProductItem = ProductItem()
 
-        var product4 : ProductItem = ProductItem()
-        var product5 : ProductItem = ProductItem()
-        var product6 : ProductItem = ProductItem()
+        var product4: ProductItem = ProductItem()
+        var product5: ProductItem = ProductItem()
+        var product6: ProductItem = ProductItem()
         var product7: ProductItem = ProductItem()
+        var product8: ProductItem = ProductItem()
+        var product9: ProductItem = ProductItem()
+
 
         product1.name = "Яблоко"
         product1.cost = 7.0
@@ -75,13 +78,34 @@ class ChosenProductsFragment : Fragment() {
         product7.count = 123
         product7.labelForCost = "кг/руб"
 
-        productsInBasketList = mutableListOf(product1, product2, product3, product4, product5, product6,product7)
+        product8.name = "Яблоко"
+        product8.cost = 7.0
+        product8.count = 100
+        product8.labelForCost = "кг/руб"
 
-        var adapter : ProductItemRecyclerViewAdapter = ProductItemRecyclerViewAdapter(
+        product9.name = "Груша"
+        product9.cost = 70.0
+        product9.count = 23
+        product9.labelForCost = "кг/руб"
+
+
+        productsInBasketList = mutableListOf(
+            product1,
+            product2,
+            product3,
+            product4,
+            product5,
+            product6,
+            product7,
+            product8,
+            product9
+        )
+
+        var adapter: ProductItemRecyclerViewAdapter = ProductItemRecyclerViewAdapter(
             productsInBasketList as MutableList<ProductItem>
         )
 
-        productsRecyclerView = requireActivity().findViewById<RecyclerView>(R.id.products_recycler_view)
+        productsRecyclerView = view.findViewById<RecyclerView>(R.id.productsRecyclerView)
         productsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         productsRecyclerView.adapter = adapter
     }

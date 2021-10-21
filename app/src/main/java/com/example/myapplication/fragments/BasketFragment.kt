@@ -48,11 +48,11 @@ class BasketFragment : Fragment() {
         var navControllerMain = Navigation.findNavController(requireActivity(), R.id.fragmentContainerView)
 
         if(windowType.equals("category")){
-//            val navHostFragment = requireActivity().supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
-//            val navController = navHostFragment.navController
-//            navController.navigate(R.id.categoryFragment)
-
             navController.navigate(R.id.categoryFragment)
+        } else if(windowType.equals("basket")){
+            navController.navigate(R.id.chosenProductsFragment)
+        } else {
+            navController.navigate(R.id.chosenProductsFragment)
         }
 
         backButton = requireActivity().findViewById<Button>(R.id.back_basket)

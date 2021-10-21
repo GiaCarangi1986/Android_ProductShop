@@ -15,4 +15,8 @@
         android:name="com.example.myapplication.fragments.CategoryFragment"
         android:label="fragment_category"
         tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/listOfProductsFragment"
+        android:name="com.example.myapplication.fragments.ListOfProductsFragment"
+        android:label="ListOfProductsFragment" />
 </navigation>

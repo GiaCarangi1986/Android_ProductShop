@@ -28,6 +28,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/drawable/white_background.xml" value="0.21794871794871795" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/layout/actions_all_produsts_fragment.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/layout/card_category_recycler_view_item.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/layout/category_recycler_view_item.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/layout/chosen_product_recycler_view_item.xml" value="0.5" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/layout/fragment_basket.xml" value="0.20520833333333333" />
@@ -37,6 +38,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/layout/fragment_chosen_products.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/layout/fragment_list_products.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/layout/fragment_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Android_ProductShop/app/src/main/res/layout/seacrh_product_recycler_view_item.xml" value="0.20520833333333333" />
       </map>
     </option>
   </component>

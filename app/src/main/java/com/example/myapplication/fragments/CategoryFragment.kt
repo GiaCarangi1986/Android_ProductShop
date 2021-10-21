@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.widget.Toast
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.adapters.CategoryRecyclerViewAdapter
@@ -39,18 +42,26 @@ class CategoryFragment : Fragment() {
         var product5 : Category = Category("Мясные изделия")
         var product6 : Category = Category("Хлебобулочные изделия")
         var product7: Category = Category("Ягоды")
+        var product8: Category = Category("Бытовая химия")
+        var product9: Category = Category("Товары для дома")
 
+        class ItemClickListenerClass: CategoryRecyclerViewAdapter.ItemClickListener{
+            override fun onItemClick(position: Int) {
+                Navigation.findNavController(requireActivity(), R.id.fragmentContainerView2).navigate(R.id.listOfProductsFragment)
+            }
 
+        }
 
-        categoriesList = mutableListOf(product1, product2, product3, product4, product5, product6,product7)
+        categoriesList = mutableListOf(product1, product2, product3, product4, product5, product6,product7, product8, product9)
 
         var adapter : CategoryRecyclerViewAdapter = CategoryRecyclerViewAdapter(
-            categoriesList as MutableList<Category>
+            categoriesList as MutableList<Category>, ItemClickListenerClass()
         )
 
         categoryRecyclerView = requireActivity().findViewById<RecyclerView>(R.id.categoryRecyclerView)
-        categoryRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        categoryRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         categoryRecyclerView.adapter = adapter
+
 
     }
 
